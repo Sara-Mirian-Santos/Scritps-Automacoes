@@ -1,6 +1,6 @@
 #  Limpeza automática do Docker
 
-Este script automatiza a limpeza de recursos no utilizados pelo Docker como: imagens, containers, volumes e cache, ideal para ambientes com uso frequente do Docker.
+Este script automatiza a limpeza de recursos não utilizados pelo Docker, como: imagens, containers, volumes não usados e cache. É ideal para ambientes com uso intenso do Docker, como em servidores de CI/CD.
 
 ---
 
@@ -25,11 +25,11 @@ O script **remove tudo que o Docker considera no utilizado**, incluindo:
 
 -  Containers parados
 -  Imagens no referenciadas
--  Volumes
+-  Volumes não utilizados por nenhum container
 -  Cache de build
 -  Logs dos containers
 
- **Se você utiliza volumes persistentes com dados importantes, revise antes de executar!**
+ **Se você utiliza volumes persistentes para bancos de dados, arquivos ou outros dados importantes, revise cuidadosamente antes de usar o script**
 
 ---
 
